@@ -1,0 +1,758 @@
+✅ ملف CSS كامل — style.css
+/* ===============================
+   GLOBAL STYLES
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  width: 90%;
+  margin: auto;
+}
+
+/* ===============================
+   HEADER
+================================= */
+:root {
+  --header-bg: #0a2342;
+  --accent: #ffc107;
+}
+
+/* .site-header{
+  background: var(--header-bg);
+  color: #fff;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+.header-grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+}
+
+.brand-logo{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  object-fit:cover;
+} */
+
+/* Desktop nav */
+/* .main-nav ul{
+  display:flex;
+  gap:20px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.main-nav a{
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  transition: color .2s;
+}
+
+.main-nav a:hover{ color: var(--accent); } */
+
+/* Hamburger (mobile) */
+/* .hamburger{
+  display:none;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+.main-nav ul.active {
+  transform: translateX(0);
+  opacity: 1;
+} */
+
+
+/* Mobile styles */
+/* @media (max-width: 768px){
+  .hamburger{ display:block; }
+
+  .main-nav{
+    position: relative;
+  }
+
+  .main-nav ul{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    padding: 80px 20px;
+    flex-direction: column;
+    gap: 18px;
+    background: #fff;
+    transform: translateX(110%); 
+    opacity: 0;
+    transition: transform .32s ease, opacity .32s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border-radius: 8px 0 0 8px;
+    z-index: 1300;
+  }
+
+  .main-nav ul li a{
+    color: #0a2342;
+    font-size: 18px;
+  }
+
+  .main-nav ul.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  body.menu-open{
+    overflow: hidden;
+  }
+} */
+:root {
+  --header-bg: #0a2342;
+  --accent: #ffc107;
+}
+
+.site-header {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+.header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.brand-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Desktop nav */
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hamburger (mobile) */
+#menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+/* @media (max-width: 768px) {
+  #menuBtn {
+    display: block;
+  }
+  #mobileMenu {
+    position: absolute;
+    top: 60px; 
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 220px;
+    display: none; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  #mobileMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #mobileMenu ul li {
+    margin-bottom: 10px;
+  }
+
+  #mobileMenu ul li a {
+    text-decoration: none;
+    color: #0a2342;
+  }
+
+
+  .main-nav ul.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+} */
+ /* Mobile styles */
+@media (max-width: 768px) {
+  /* زر الموبايل يظهر */
+  #menuBtn {
+    display: block;
+  }
+
+  /* اخفاء nav desktop */
+  .main-nav {
+    display: none;
+  }
+
+  /* Mobile menu */
+  #mobileMenu {
+    position: absolute;
+    top: 100%; /* مباشرة تحت الزر */
+    left: 0;
+    right: 0;
+    background: #0a2342; /* لون أزرق */
+    display: none; /* مخفي افتراضي */
+    z-index: 1500;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  /* Flex column للقائمة */
+  #mobileMenu ul {
+    display: flex;
+    flex-direction: column; /* عناصر تحت بعض */
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    gap: 0;
+  }
+
+  #mobileMenu ul li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3); /* خط فاصل بين العناصر */
+  }
+
+  #mobileMenu ul li:last-child {
+    border-bottom: none;
+  }
+
+  #mobileMenu ul li a {
+    text-decoration: none;
+    color: #fff; /* نص أبيض */
+    font-weight: 600;
+    padding: 12px 15px;
+    display: block;
+  }
+}
+
+
+/* ===============================
+   HERO SLIDER
+================================= */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  height: 100%;
+  position: relative;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  background: rgba(0,0,0,0.4);
+  padding: 20px 30px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.btn {
+  background: #ffc107;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+}
+
+/* Slider arrows */
+.hero-controls {
+  position: absolute;
+  bottom: 15px;
+  right: 50%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transform: translateX(50%);
+}
+
+.hero-prev,
+.hero-next {
+  background: #00000088;
+  width: 40px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+/* ===============================
+   SECTIONS GENERAL
+================================= */
+.section {
+  padding: 60px 0;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  position: relative;
+  color: #0a2342;
+}
+
+.section .lead {
+  max-width: 700px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* ===============================
+   ABOUT
+================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about-text ul {
+  list-style: none;
+  line-height: 2.3;
+  font-size: 18px;
+}
+
+/* ===============================
+   PRODUCTS
+================================= */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #0001;
+  text-align: center;
+}
+
+.product-card img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===============================
+   PROJECTS
+================================= */
+#projects {
+  padding: 40px 0;
+  text-align: center;
+}
+h3{
+  color: #0E6EB8;
+}
+#projects h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.project-card img,
+.project-card video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+#show-more-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+#show-more-btn:hover {
+  background: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📱 أصغر */
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* ===============================
+   GALLERY
+================================= */
+#gallery {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 الشاشات المتوسطة (تابلت) */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 📱 موبايل */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📱 أقل من 400px */
+@media (max-width: 400px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* ===============================
+   VIDEOS
+================================= */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   FORMS
+================================= */
+.booking-form,
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.booking-form textarea,
+.contact-form textarea {
+  grid-column: span 2;
+  min-height: 160px;
+}
+
+.booking-form input,
+.booking-form select,
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ===============================
+   SERVICES
+================================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0001;
+  text-align: center;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.site-footer {
+  padding: 30px 0;
+  text-align: center;
+  color: #fff;
+  background: #0a2342;
+  margin-top: 40px;
+}
+
+.site-footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .booking-form,
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+}
+
+.lift-gallery {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.lift-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+/* PDF Section */
+#pdf-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+#pdf-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #0a2342;
+}
+
+#pdf-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#pdf-section iframe {
+  width: 100%;
+  height: 600px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* رابط التحميل */
+#pdf-section .btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #0a2342;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+#pdf-section .btn:hover {
+  background-color: #ffc107;
+  color: #0a2342;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #pdf-section h2 {
+    font-size: 24px;
+  }
+
+  #pdf-section p {
+    font-size: 14px;
+  }
+
+  #pdf-section iframe {
+    height: 400px; /* أصغر للموبايل */
+  }
+}
+
+@media (max-width: 480px) {
+  #pdf-section iframe {
+    height: 300px; /* أصغر للموبايل الصغير */
+  }
+
+  #pdf-section .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+.projects-grid  .product-card h3{
+  color:#0E6EB8;
+}
+
+
